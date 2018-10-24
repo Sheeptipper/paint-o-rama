@@ -3,7 +3,7 @@ function textBrush(x,y){
     push() // save current drawing settings
 
 
-    let words = ["Angry", "Annoyed", "Afraid", "Awkward", "Affectionate", "Anxious", "Alarmed", "Awed", "Aggravated", "Amazed", "Astonished", "Amused", "Apprehensive", "Absorbed", "Ambivalent", "Ashamed", "Able", "Addled", "Admired", "Admirable", "Affable", "Agreeable", "Aggressive", "Abandoned","Brave", "Bothered", "Bewildered", "Bitter", "Bashful", "Blue", "Baffled", "Blissful", "Buoyant", "Bereaved", "Bold", "a", "a", "b", "b", "b", "b", "b", "b", "b","----------------------", "㋀?", "㋁!"," ㋂ ------------㋃", "㋄ ㋅-------------"," ㋆ ㋇ ㋈ ㋉///////// ㋊ ㋋", "㏠", "㏡", "㏢","㏣", "㏤ ㏥ ㏦ ㏧ ㏨ ㏩ ㏪ ㏫ ㏬ ㏭ ㏮ ㏯ ㏰ ㏱ ㏲ ㏳ ㏴ ㏵ ㏶ ㏷ ㏸ ㏹ ㏺ ㏻ ㏼ ㏽", "㏾", "㍘ ㍙ ㍚", "㍛ ㍜ ㍝ ㍞ ㍟ ㍠ ㍡ ㍢ ㍣ ㍤ ㍥ ㍦ ㍧ ㍨", "   -----㍩ ㍪ ㍫ ㍬ ㍭ ㍮ ㍯ ㍰ ","▂ ▃ ▄ ▅ ▆ ▇ █ ▉▁▊▋▌▍▎","▂ ▃ ▄ ▅ ▆ ▇ █ ▉", "▊▋▌▍", "▎▁▁▁▁▁▁▁▁▁▁▁▁▁▂▃▄▅▆▇","▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▉▊▋▌▍", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▃▄▅▆▇█▉▊▋▌▍▎▁▂▃▄▅▆▇█▉▊▋▌▍▎▁▂▃▄▅▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇█▉▊▋▌▍▎","▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁","▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁", " (◜◡‾)ﾉʅ(‾◡◝)"]
+    let words = ["Angry", "Annoyed", "Afraid", "Awkward", "Affectionate", "Anxious", "Alarmed", "Awed", "Aggravated", "Amazed", "Astonished", "Amused", "Apprehensive", "Absorbed", "Ambivalent", "Ashamed", "Able", "Addled", "Admired", "Admirable", "Affable", "Agreeable", "Aggressive", "Abandoned","Brave", "Bothered", "Bewildered", "Bitter", "Bashful", "Blue", "Baffled", "Blissful", "Buoyant", "Bereaved", "Bold", "a", "a", "b", "b", "b", "b", "b", "b", "b","----------------------", "㋀?", "㋁!"," ㋂ ------------㋃", "㋄ ㋅-------------"," ㋆ ㋇ ㋈ ㋉///////// ㋊ ㋋", "㏠", "㏡", "㏢","㏣", "㏤ ㏥ ㏦ ㏧ ㏨ ㏩ ㏪ ㏫ ㏬ ㏭ ㏮ ㏯ ㏰ ㏱ ㏲ ㏳ ㏴ ㏵ ㏶ ㏷ ㏸ ㏹ ㏺ ㏻ ㏼ ㏽", "㏾", "㍘ ㍙ ㍚", "㍛ ㍜ ㍝ ㍞ ㍟ ㍠ ㍡ ㍢ ㍣ ㍤ ㍥ ㍦ ㍧ ㍨", "   -----㍩ ㍪ ㍫ ㍬ ㍭ ㍮ ㍯ ㍰ ","▂ ▃ ▄ ▅ ▆ ▇ █ ▉▁▊▋▌▍▎","▂ ▃ ▄ ▅ ▆ ▇ █ ▉", "▊▋▌▍", "▎▁▁▁▁▁▁▁▁▁▁▁▁▁▂▃▄▅▆▇","▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▉▊▋▌▍", "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▃▄▅▆▇█▉▊▋▌▍▎▁▂▃▄▅▆▇█▉▊▋▌▍▎▁▂▃▄▅▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇█▉▊▋▌▍▎","▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁","▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"]
 
     let indext = random(words.length)// pick a random index from words array
     indext = floor(indext)
@@ -14,7 +14,7 @@ function textBrush(x,y){
 
     if (mouseIsPressed) {
        noStroke(255)
-    } else { 
+    } else {
        stroke(50)
     }
 
